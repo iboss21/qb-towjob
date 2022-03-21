@@ -11,15 +11,6 @@ local ranWorkThread = false
 
 -- Functions
 
-local function getRandomVehicleLocation()
-    local randomVehicle = math.random(1, #Config.Locations["towspots"])
-    while (randomVehicle == LastVehicle) do
-        Wait(10)
-        randomVehicle = math.random(1, #Config.Locations["towspots"])
-    end
-    return randomVehicle
-end
-
 local function deliverVehicle(vehicle)
     DeleteVehicle(vehicle)
     RemoveBlip(CurrentBlip2)
@@ -45,6 +36,15 @@ local function getVehicleInDirection(coordFrom, coordTo)
 	local rayHandle = CastRayPointToPoint(coordFrom.x, coordFrom.y, coordFrom.z, coordTo.x, coordTo.y, coordTo.z, 10, PlayerPedId(), 0)
 	local a, b, c, d, vehicle = GetRaycastResult(rayHandle)
 	return vehicle
+end
+
+local function getRandomVehicleLocation()
+    local randomVehicle = math.random(1, #Config.Locations["towspots"])
+    while (randomVehicle == LastVehicle) do
+        Wait(10)
+        randomVehicle = math.random(1, #Config.Locations["towspots"])
+    end
+    return randomVehicle
 end
 
 local function isTowVehicle(vehicle)

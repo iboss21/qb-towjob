@@ -1,9 +1,9 @@
 Config = {}
 
-Config.BailPrice = 250
+Config.BailPrice = 175
 
 Config.Vehicles = {
-    ["flatbed"] = "Flatbed",
+    ["flatbed"] = "flatbed",
 }
 
 Config.Locations = {
@@ -12,12 +12,12 @@ Config.Locations = {
         coords = vector4(471.39, -1311.03, 29.21, 114.5),
     },
     ["vehicle"] = {
-        label = "Flatbed",
+        label = "flatbed",
         coords = vector4(489.65, -1331.82, 29.33, 306.5),
     },
     ["towspots"] = {
-        [1] =  {model = "sultanrs", coords = vector3(-2480.8720703125, -211.96409606934, 17.397672653198)},
-        [2] =  {model = "zion", coords = vector3(-2723.392578125, 13.207388877869, 15.12806892395)},
+        [1] =  {model = "m4c", coords = vector3(-2480.8720703125, -211.96409606934, 17.397672653198)},
+        [2] =  {model = "g63topcar", coords = vector3(-2723.392578125, 13.207388877869, 15.12806892395)},
         [3] =  {model = "oracle", coords = vector3(-3169.6235351563, 976.18127441406, 15.038360595703)},
         [4] =  {model = "chino", coords = vector3(-3139.7568359375, 1078.7182617188, 20.189767837524)},
         [5] =  {model = "baller2", coords = vector3(-1656.9357910156, -246.16479492188, 54.510955810547)},
